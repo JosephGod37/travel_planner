@@ -1,67 +1,67 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="travel_planner.MainWindow"
-        Title="travel_planner">
-        <Grid HorizontalAlignment="Center">
-                <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
+        Title="travel_planner"
+        Width="800" Height="450">
 
-                <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
+    <Grid HorizontalAlignment="Center" Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
 
-                <TextBlock Grid.Row="0" Grid.ColumnSpan="3"  Text="TRAVEL PLANNER" FontWeight="Bold" Margin="10" Padding="15"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                
-                <TextBox x:Name="TaskTextBox" Grid.Row="1" Grid.Column="0" Watermark="Wpisz swoje imie i nazwisko" Margin="10"/>
-                <ComboBox x:Name="CategoryComboBox" Grid.Row="1" Grid.Column="1" Width="200" Margin="10" SelectedIndex="0">
-                        <ComboBoxItem Content="Wybierz kraj docelowej podrozy"/>
-                        <ComboBoxItem Content="Włochy"/>
-                        <ComboBoxItem Content="Japonia"/>
-                        <ComboBoxItem Content="Norwegia"/>
-                        <ComboBoxItem Content="USA"/>
-                        <ComboBoxItem Content="Francja"/>
-                </ComboBox>
-                
-                <StackPanel Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">
-                        <TextBlock  Text="Wybierz kategorie atrakcji turystycznych" FontWeight="Bold" Margin="10" />
-                        <CheckBox>Muzea</CheckBox>
-                        <CheckBox>Parki Narodowe</CheckBox>
-                        <CheckBox>Zabytki</CheckBox>
-                        <CheckBox>Restauracje</CheckBox>
-                        <CheckBox>Galerie sztuki</CheckBox>
-                        <CheckBox>Festiwale i koncerty</CheckBox>
-                </StackPanel>
-                
-                <StackPanel Grid.Row="2" Grid.Column="0" Margin="10">
-                        <TextBlock Text="Wybierz środek transportu:" FontWeight="Bold"/>
-                        <RadioButton GroupName="transport" Content="Samolot"/>
-                        <RadioButton GroupName="transport" Content="Samochód"/>
-                        <RadioButton GroupName="transport" Content="Pociąg"/>
-                        <RadioButton GroupName="transport" Content="Statek"/>
-                </StackPanel>
-                
-                <StackPanel Grid.Row="2" Grid.Column="1" Margin="10">
-                        <TextBlock Text="Dodaj miasto do odwiedzenia:" FontWeight="Bold"/>
-                        <TextBox x:Name="CityTextBox" Watermark="Wpisz nazwę miasta" Margin="0,5"/>
-                        <Button Content="Dodaj miasto" Margin="0,5" Click="AddCity"/>
-                        <ListBox x:Name="CitiesListBox" Height="100" Margin="0,5"/>
-                </StackPanel>
-                
-                <StackPanel Grid.Row="2" Grid.Column="2" Margin="10">
-                        <TextBlock Text="Zdjęcie wybranego kraju:" FontWeight="Bold"/>
-                        <Image x:Name="CountryImage" Width="150" Height="100" Stretch="Uniform"/>
-                </StackPanel>
-                
-                <Button Grid.Row="4" Grid.ColumnSpan="3" Content="Pokaż podsumowanie" HorizontalAlignment="Center" Margin="10" Click="ShowSummary"/>
-        </Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="3" Text="TRAVEL PLANNER" FontWeight="Bold" Padding="15" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <TextBox x:Name="TaskTextBox" Grid.Row="1" Grid.Column="0" Watermark="Wpisz swoje imie i nazwisko" Margin="10"/>
+
+        <ComboBox x:Name="CategoryComboBox" Grid.Row="1" Grid.Column="1" Width="200" Margin="10" SelectedIndex="0">
+            <ComboBoxItem Content="Wybierz kraj docelowej podrozy"/>
+            <ComboBoxItem Content="Włochy"/>
+            <ComboBoxItem Content="Japonia"/>
+            <ComboBoxItem Content="Norwegia"/>
+            <ComboBoxItem Content="USA"/>
+            <ComboBoxItem Content="Francja"/>
+        </ComboBox>
+
+        <StackPanel Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Wybierz kategorie atrakcji turystycznych" FontWeight="Bold" Margin="10" />
+            <CheckBox x:Name="MuseumCheckBox" Content="Muzea"/>
+            <CheckBox x:Name="ParksCheckBox" Content="Parki Narodowe"/>
+            <CheckBox x:Name="MonumentsCheckBox" Content="Zabytki"/>
+            <CheckBox x:Name="RestaurantsCheckBox" Content="Restauracje"/>
+            <CheckBox x:Name="GalleriesCheckBox" Content="Galerie sztuki"/>
+            <CheckBox x:Name="FestivalsCheckBox" Content="Festiwale i koncerty"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="0" Margin="10">
+            <TextBlock Text="Wybierz środek transportu:" FontWeight="Bold"/>
+            <RadioButton x:Name="PlaneRadio" GroupName="transport" Content="Samolot"/>
+            <RadioButton x:Name="CarRadio" GroupName="transport" Content="Samochód"/>
+            <RadioButton x:Name="TrainRadio" GroupName="transport" Content="Pociąg"/>
+            <RadioButton x:Name="ShipRadio" GroupName="transport" Content="Statek"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="1" Margin="10">
+            <TextBlock Text="Dodaj miasto do odwiedzenia:" FontWeight="Bold"/>
+            <TextBox x:Name="CityTextBox" Watermark="Wpisz nazwę miasta" Margin="0,5"/>
+            <Button Content="Dodaj miasto" Margin="0,5" Click="OnAddCity"/>
+            <ListBox x:Name="CitiesListBox" Height="100" Margin="0,5"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="2" Margin="10">
+            <TextBlock Text="Zdjęcie wybranego kraju:" FontWeight="Bold"/>
+            <Image x:Name="CountryImage" Width="150" Height="100" Stretch="Uniform"/>
+        </StackPanel>
+
+        <Button Grid.Row="4" Grid.ColumnSpan="3" Content="Pokaż podsumowanie" HorizontalAlignment="Center" Margin="10" Click="OnShowSummary"/>
+    </Grid>
 </Window>

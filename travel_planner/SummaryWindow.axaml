@@ -1,0 +1,19 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="travel_planner.SummaryWindow"
+        Title="Podsumowanie podróży"
+        Width="400" Height="400">
+
+    <ScrollViewer>
+        <StackPanel Margin="20" Spacing="10">
+            <TextBlock x:Name="NameText"/>
+            <TextBlock x:Name="CountryText"/>
+            <TextBlock x:Name="TransportText"/>
+            <TextBlock Text="Atrakcje:" FontWeight="Bold"/>
+            <ListBox x:Name="AttractionsList"/>
+            <TextBlock Text="Miasta do odwiedzenia:" FontWeight="Bold"/>
+            <ListBox x:Name="CitiesList"/>
+        </StackPanel>
+    </ScrollViewer>
+
+</Window>

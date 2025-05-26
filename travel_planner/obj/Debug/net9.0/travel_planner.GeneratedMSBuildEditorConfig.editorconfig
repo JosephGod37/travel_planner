@@ -26,3 +26,6 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/User/RiderProjects/travel_planner/travel_planner/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/User/RiderProjects/travel_planner/travel_planner/SummaryWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
