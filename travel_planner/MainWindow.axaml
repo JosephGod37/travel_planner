@@ -3,7 +3,7 @@
         x:Class="travel_planner.MainWindow"
         Title="travel_planner"
         Width="800" Height="450">
-
+    
     <Grid HorizontalAlignment="Center" Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />

@@ -3,6 +3,7 @@
   <component name="AvaloniaProject">
     <option name="projectPerEditor">
       <map>
+        <entry key="travel_planner/App.axaml" value="travel_planner/travel_planner.csproj" />
         <entry key="travel_planner/MainWindow.axaml" value="travel_planner/travel_planner.csproj" />
         <entry key="travel_planner/SummaryWindow.axaml" value="travel_planner/travel_planner.csproj" />
       </map>
